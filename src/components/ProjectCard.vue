@@ -25,6 +25,7 @@ export default {
         <p class="card-text">{{ project.description }}</p>
         <a href="#" class="btn btn-primary">Leggi di più</a>
     </div>
+   
 </template>
 
 <style lang="scss">
