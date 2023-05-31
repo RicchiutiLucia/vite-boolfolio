@@ -32,7 +32,7 @@ const router = createRouter(
                 component: ProjectList
             },
             {
-                path: '/about/:slug',
+                path: '/project/:slug',
                 name: 'single-project',
                 component: SingleProject
             }

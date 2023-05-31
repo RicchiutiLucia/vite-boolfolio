@@ -43,7 +43,7 @@ export default {
                     routeName: 'about us'
                 },
                 {
-                    label: 'Contact us',
+                    label: 'Contact',
                     routeName: 'contact'
                 },
                 
