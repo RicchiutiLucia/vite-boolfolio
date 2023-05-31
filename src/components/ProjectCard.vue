@@ -1,5 +1,5 @@
 <script>
-
+ import { store } from '../store.js';
 export default {
     name: 'ProjectCard',
     props: {
@@ -7,7 +7,7 @@ export default {
     },
     data() {
         return {
-            BaseUrl: "http://127.0.0.1:8000"
+            store,
         }
     },
 
@@ -16,7 +16,7 @@ export default {
 
 <template>
     <div class="card">
-        <img v-if="project.url" :src="`${this.BaseUrl}/storage/${project.url}`" class="card-img-top">
+        <img v-if="project.url" :src="`${this.store.baseUrl}/storage/${project.url}`" class="card-img-top">
         <img v-else src="../../public/NotFound.jpg" class="card-img-top"/>
     </div>
     <div class="card-body">
