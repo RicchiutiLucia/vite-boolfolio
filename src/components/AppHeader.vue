@@ -35,7 +35,7 @@ export default {
                     label: 'Home',
                     routeName: 'home'
                 },{
-                    label: 'Progetti',
+                    label: 'Projects',
                     routeName: 'project'
                 },
                 {
