@@ -59,8 +59,7 @@
     }
 </script>
 
-<style lang="scss">
-
+<style>
 body {
   font-family: Arial, Helvetica, sans-serif;
   margin: 0;
