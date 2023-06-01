@@ -2,10 +2,10 @@
     <main>
         <div class="container">
             <div class="row m-5">
-            <div class="card p-0">
-                <img v-if="project.url" :src="`${this.store.baseUrl}/storage/${this.project.url}`" class="card-img-top" :alt="`${this.project.title}`">
-                <img v-else src="https://upload.wikimedia.org/wikipedia/commons/d/d1/Image_not_available.png" class="card-img-top" alt="Placeholder Image">
-    
+            <div class="card p-0" v-if="project">
+                
+                <img v-if="project.url" :src="`${this.store.baseUrl}/storage/${this.project.url}`" class="img-fluid" :alt="`${this.project.title}`">
+                <img v-else src="https://upload.wikimedia.org/wikipedia/commons/d/d1/Image_not_available.png" class="img-fluid" alt="Placeholder Image">
                 
                 <div class="card-body">
                     <h5 class="card-title">{{this.project.title}}</h5>
@@ -41,7 +41,7 @@
         data() {
             return {
                 store,
-                project: []
+                project: null
             }
         },
         created() {

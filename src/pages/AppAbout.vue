@@ -1,6 +1,5 @@
 <template>
-    <div class="container">
-        <div class="about-section">
+   <div class="about-section">
   <h1>About Us Page</h1>
   <p>Some text about who we are and what we do.</p>
   <p>Resize the browser window to see that this page is responsive by the way.</p>
@@ -8,7 +7,7 @@
 
 <h2 style="text-align:center">Our Team</h2>
 <div class="row">
-  <div class="column">
+  <div class="col-4">
     <div class="card">
       <img src="https://lifestylemadeinitaly.it/wp-content/uploads/Creazione-avatar-FB.jpg" alt="Jane" style="width:100%">
       <div class="container">
@@ -16,12 +15,11 @@
         <p class="title">CEO & Founder</p>
         <p>Some text that describes me lorem ipsum ipsum lorem.</p>
         <p>jane@example.com</p>
-        
       </div>
     </div>
   </div>
 
-  <div class="column">
+  <div class="col-4">
     <div class="card">
       <img src="https://img.freepik.com/premium-vector/young-woman-avatar-cartoon-character-profile-picture_18591-55057.jpg" alt="Mike" style="width:100%">
       <div class="container">
@@ -29,12 +27,11 @@
         <p class="title">Art Director</p>
         <p>Some text that describes me lorem ipsum ipsum lorem.</p>
         <p>mike@example.com</p>
-        
       </div>
     </div>
   </div>
 
-  <div class="column">
+  <div class="col-4">
     <div class="card">
       <img src="https://images.everyeye.it/img-notizie/facebook-l-invasione-avatar-italia-come-crearne-uno-v3-447599.jpg" alt="John" style="width:100%">
       <div class="container">
@@ -42,13 +39,10 @@
         <p class="title">Designer</p>
         <p>Some text that describes me lorem ipsum ipsum lorem.</p>
         <p>john@example.com</p>
-        
       </div>
     </div>
   </div>
 </div>
-
-    </div>
    
 </template>
 
@@ -73,12 +67,6 @@ html {
   box-sizing: inherit;
 }
 
-.column {
-  float: left;
-  width: 33.3%;
-  margin-bottom: 16px;
-  padding: 0 8px;
-}
 
 .card {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
@@ -105,6 +93,13 @@ html {
 .title {
   color: grey;
 }
+img{
+  object-fit: 50%;
+  width: 50%;
+  
+}
+
+
 
 
 

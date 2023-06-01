@@ -49,7 +49,8 @@ export default {
         <nav aria-label="Page navigation example py-4 ">
         <ul class="pagination d-flex justify-content-center">
             <li class="page-item"><button class="page-link" @click="getProjects(currentPage - 1)" :class="{'disabled' : currentPage == 1}">Previous</button></li>
-            <li class="page-item"><button class="page-link" @click="getProjects(currentPage + 1)" :class="{'disabled' : currentPage == lastPage}">Next</button></li>
+            <li class="page-item" v-for="page in lastPage" :class="{'active' : page==currentPage}"><button class="page-link" @click="getProjects(page)">{{ page }}</button></li>
+            <li class="page-item"><button class="page-link" @click="getProjects(currentPage +1)" :class="{'disabled' : currentPage == lastPage}">Next</button></li>
         </ul>
     </nav>
     </div>

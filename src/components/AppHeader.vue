@@ -10,7 +10,7 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 <li class="nav-item" v-for="(navItem, index) in navigation" :key="index">
-                    <router-link :to="{ name: navItem.routeName }" class="nav-link" aria-current="page">{{
+                    <router-link :to="{ name: navItem.routeName }" class="nav-link"  :class="this.$route.name === navItem.routeName ? 'active': ''" aria-current="page">{{
                         navItem.label
                     }}</router-link>
                 </li>
@@ -53,6 +53,13 @@ export default {
     }
 }
 </script>
+
+<style lang="scss">
+@use '../styles/general.scss';
+
+
+
+</style>
 
 
 
