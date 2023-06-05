@@ -24,6 +24,10 @@
                     </div>
                     <p v-else>Nessuna tecnologia assegnata</p>
 
+                    <router-link :to="{name: 'single-project', params: {slug: 'ciccio-bello-molisana'}}" class="btn btn-primary my-3">
+                        Vedi Project cicciobello e molisana
+                    </router-link>
+
                 </div>
             </div>
         </div>
@@ -44,8 +48,9 @@
                 project: null
             }
         },
-        created() {
-            const slug = this.$route.params.slug;
+        methods:{
+            getProjects(){
+                const slug = this.$route.params.slug;
             
             console.log(slug);
 
@@ -59,6 +64,20 @@
                 }
             });
 
+            }
+
+        },
+        mounted() {
+            this.getProjects(); 
+
+        },
+        created(){
+            this.$watch(
+                () => this.$route.params,
+                (toParams, previousParams) => {
+                    this.getProjects();
+                }
+            )
         }
     }
 </script>
